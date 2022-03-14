@@ -24,7 +24,7 @@
         <!-- Lista dei ToDo -->
         <ul class="todo-list">
             <li v-for="(todo, index) in arrTodo" class="todo-item" :class="todo.done == true ? 'done' : ''">
-                <div>{{ todo.text }}</div>
+                <div @click="invertDoneUndone(index)" id="todo-text">{{ todo.text }}</div>
                 <button @click="deleteTodo(index)" class="btn-delete"><i class="fa-regular fa-trash-can"></i></button>
             </li>
         </ul>

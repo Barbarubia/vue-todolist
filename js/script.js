@@ -50,6 +50,14 @@ const app = new Vue({
                     done: false
                 };
             }
+        },
+        // Funzione che inverte lo stato della chiave "done" quando si clicca sul testo del todo
+        invertDoneUndone(index) {
+            if (this.arrTodo[index].done == true) {
+                this.arrTodo[index].done = false;
+            } else if (this.arrTodo[index].done == false) {
+                this.arrTodo[index].done = true;
+            };
         }
     }
 })
