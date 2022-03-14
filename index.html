@@ -17,7 +17,7 @@
     <div id="root">
         <!-- Campo per aggiungere un nuovo ToDo -->
         <div class="add-todo">
-            <input v-model="newTodo.text" type="text" name="todo-text" id="todo-text" placeholder="Aggiungi un nuovo ToDo" size="1">
+            <input @keyup.enter="addTodo" v-model="newTodo.text" type="text" name="todo-text" id="todo-text" placeholder="Aggiungi un nuovo ToDo" size="1">
             <button @click="addTodo">Aggiungi</button>
         </div>
 
