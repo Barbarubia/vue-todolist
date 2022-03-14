@@ -16,7 +16,7 @@
 
     <div id="root">
         <ul class="todo-list">
-            <li v-for="todo in arrTodo" class="todo-item">
+            <li v-for="todo in arrTodo" class="todo-item" :class="todo.done == true ? 'done' : ''">
                 <div>{{ todo.text }}</div>
             </li>
         </ul>
