@@ -15,6 +15,31 @@ html {
     padding: 1rem;
 }
 
+/* CSS per ADD-TODO  */
+.add-todo {
+    max-width: 500px;
+    margin: 0 auto 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.add-todo input {
+    height: 3rem;
+    border-radius: .5em;
+    padding: .5rem 1rem;
+    flex-grow: 1000000;
+}
+
+.add-todo button {
+    height: 3rem;
+    border-radius: .5em;
+    padding: .5rem 1rem;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+/* CSS per TODO-LIST */
 .todo-list {
     padding: 2rem;
     border-radius: .5rem;

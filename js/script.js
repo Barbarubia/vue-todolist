@@ -1,6 +1,10 @@
 const app = new Vue({
     el: '#root',
     data: {
+        newTodo: {
+            text: '',
+            done: false
+        },
         arrTodo: [
             {
                 text: 'Comprare il biglietto aereo',
@@ -33,8 +37,19 @@ const app = new Vue({
         ]
     },
     methods: {
+        // Funzione che elimina un todo dalla lista arrTodo
         deleteTodo(index) {
             this.arrTodo.splice(index, 1);
+        },
+        // Funzione che aggiunge un nuovo elemento alla lista arrTodo
+        addTodo() {
+            if (this.newTodo.text.trim() != '') {
+                this.arrTodo.push(this.newTodo);
+                this.newTodo = {
+                    text: '',
+                    done: false
+                };
+            }
         }
     }
 })

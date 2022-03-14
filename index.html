@@ -15,6 +15,13 @@
 <body>
 
     <div id="root">
+        <!-- Campo per aggiungere un nuovo ToDo -->
+        <div class="add-todo">
+            <input v-model="newTodo.text" type="text" name="todo-text" id="todo-text" placeholder="Aggiungi un nuovo ToDo" size="1">
+            <button @click="addTodo">Aggiungi</button>
+        </div>
+
+        <!-- Lista dei ToDo -->
         <ul class="todo-list">
             <li v-for="(todo, index) in arrTodo" class="todo-item" :class="todo.done == true ? 'done' : ''">
                 <div>{{ todo.text }}</div>
