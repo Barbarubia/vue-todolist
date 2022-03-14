@@ -5,6 +5,47 @@
     box-sizing: border-box;
 }
 
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#root {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 1rem;
+}
+
+.todo-list {
+    padding: 2rem;
+    border-radius: .5rem;
+    background-color: rgb(235, 235, 235);
+    list-style: none;
+}
+
+.todo-item {
+    padding: .5em;
+    border-bottom: 2px solid lightgrey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-item:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+.todo-item .btn-delete {
+    padding: .5em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.todo-item .btn-delete:hover {
+    color: red
+}
+
 .todo-item.done {
     text-decoration: line-through;
 }

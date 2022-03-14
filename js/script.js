@@ -31,9 +31,10 @@ const app = new Vue({
                 done: false
             },
         ]
+    },
+    methods: {
+        deleteTodo(index) {
+            this.arrTodo.splice(index, 1);
+        }
     }
-
-
-
-
 })
